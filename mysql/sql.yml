@@ -1,0 +1,22 @@
+account_select_by_role:
+  sql: |
+    select 
+    id,
+    username,
+    email,
+    phone,
+    fullname
+    from account
+    where id in (select account_id from account_role where role=?)
+    order by fullname
+    ;
+  select:
+    - id
+    - username
+    - email
+    - phone
+    - fullname
+  params:
+    -
+      type: s
+      value: rs:role

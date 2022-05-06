@@ -1,0 +1,68 @@
+type: div
+attribute:
+  class: card
+  style:
+    width: 200px
+    display: inline-block
+    margin: 10px
+innerHTML:
+  -
+    type: img
+    settings:
+      enabled: rs:img_exist
+    attribute:
+      src: rs:img_name
+      class: card-img-top
+      alt: rs:fullname
+  -
+    type: div
+    settings:
+      disabled: rs:img_exist
+    attribute:
+      class: text-center font-italic
+      style:
+        margin: 0px
+        height: 198px
+        padding-top: 80px
+    innerHTML: 'No image'
+  -
+    type: div
+    attribute:
+      class: card-body
+      style:
+        min-height: 200px
+    innerHTML:
+      -
+        type: h5
+        attribute:
+          class: card-title
+        innerHTML: rs:fullname
+      -
+        type: address
+        innerHTML:
+          -
+            type: div
+            innerHTML:
+              -
+                type: abbr
+                attribute:
+                  title: Email
+                  class: content-colon
+                innerHTML: 'Email'
+              -
+                type: a
+                innerHTML: rs:email
+                attribute:
+                  onclick: "location.href='mailto:'+this.innerHTML"
+          -
+            type: div
+            innerHTML:
+              -
+                type: abbr
+                attribute:
+                  title: Phone
+                  class: content-colon
+                innerHTML: 'Phone'
+              -
+                type: text
+                innerHTML: rs:phone
