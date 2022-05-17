@@ -1,5 +1,9 @@
-version: 1.0.0
+version: 1.0.1
 history:
+  1.0.1:
+    date: '2022-05-17'
+    title: 'Layout'
+    description: 'Improvement.'
   1.0.0:
     date: '2022-05-06'
     title: 'First version'

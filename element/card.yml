@@ -2,7 +2,7 @@ type: div
 attribute:
   class: card
   style:
-    width: 200px
+    width: 330px
     display: inline-block
     margin: 10px
 innerHTML:
@@ -14,6 +14,10 @@ innerHTML:
       src: rs:img_name
       class: card-img-top
       alt: rs:fullname
+      style:
+        margin: 0px
+        height: 328px
+        width: 328px
   -
     type: div
     settings:
@@ -22,8 +26,9 @@ innerHTML:
       class: text-center font-italic
       style:
         margin: 0px
-        height: 198px
-        padding-top: 80px
+        height: 328px
+        width: 328px
+        padding-top: 150px
     innerHTML: 'No image'
   -
     type: div
