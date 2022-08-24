@@ -1,5 +1,9 @@
-version: 1.0.2
+version: 1.0.3
 history:
+  1.0.3:
+    date: '2022-08-24'
+    title: Card
+    description: 'Change width from 330 to 320 px.'
   1.0.2:
     date: '2022-06-07'
     title: Versions

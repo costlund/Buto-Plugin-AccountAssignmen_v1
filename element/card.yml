@@ -2,7 +2,7 @@ type: div
 attribute:
   class: card
   style:
-    width: 330px
+    width: 320px
     display: inline-block
     margin: 10px
 innerHTML:
