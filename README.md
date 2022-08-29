@@ -8,6 +8,16 @@ Named with username and jpg extension
 /theme/[theme]/account/img
 ```
 
+## Settings
+```
+plugin:
+  account:
+    assignment_v1:
+      enabled: true
+      settings:
+        mysql: 'yml:/../buto_data/theme/[theme]/mysql.yml'
+```
+
 ## Widget cards
 Render all accounts for with an given role.
 In this example all with role webmaster.
@@ -18,5 +28,13 @@ data:
   plugin: account/assignment_v1
   method: cards
   data:
+```
+Role.
+```
     role: webmaster
+```
+Order by (optional, default is fullname).
+```
+    order_by:
+      key: fullname
 ```

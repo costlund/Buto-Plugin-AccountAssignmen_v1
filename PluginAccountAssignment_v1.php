@@ -13,7 +13,7 @@ class PluginAccountAssignment_v1{
   }
   public function widget_cards($data){
     $data = new PluginWfArray($data['data']);
-    $accounts = $this->db->account_select_by_role($data->get('role'));
+    $accounts = $this->db->account_select_by_role($data->get('role'), $data->get('order_by/key'));
     $cards = array();
     foreach($accounts as $v){
       $img_name = $this->img_dir.'/'.$v['username'].'.jpg';

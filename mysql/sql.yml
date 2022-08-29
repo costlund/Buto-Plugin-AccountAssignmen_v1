@@ -8,7 +8,7 @@ account_select_by_role:
     fullname
     from account
     where id in (select account_id from account_role where role=?)
-    order by fullname
+    order by ?
     ;
   select:
     - id
@@ -20,3 +20,6 @@ account_select_by_role:
     -
       type: s
       value: rs:role
+    -
+      type: s
+      value: rs:order_by_key

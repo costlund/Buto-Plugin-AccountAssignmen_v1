@@ -39,10 +39,14 @@ class db_account_auto{
     }
     return $sql;
   }
-  public function account_select_by_role($role){
+  public function account_select_by_role($role, $order_by_key){
+    if(!$order_by_key){
+      $order_by_key = 'fullname';
+    }
     $this->db_open();
     $sql = $this->sql_get('account_select_by_role');
     $sql->setByTag(array('role' => $role));
+    $sql->setByTag(array('order_by_key' => $order_by_key));
     $this->mysql->execute($sql->get());
     return $this->mysql->getMany();
   }
