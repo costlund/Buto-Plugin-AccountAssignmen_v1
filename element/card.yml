@@ -1,73 +1,70 @@
 type: div
-attribute:
-  class: card
-  style:
-    width: 320px
-    display: inline-block
-    margin: 10px
-innerHTML:
-  -
-    type: img
-    settings:
-      enabled: rs:img_exist
-    attribute:
-      src: rs:img_name
-      class: card-img-top
-      alt: rs:fullname
-      style:
-        margin: 0px
-        height: 328px
-        width: 328px
-  -
-    type: div
-    settings:
-      disabled: rs:img_exist
-    attribute:
-      class: text-center font-italic
-      style:
-        margin: 0px
-        height: 328px
-        width: 328px
-        padding-top: 150px
-    innerHTML: 'No image'
+attribute: 
+  class: col-sm-4
+innerHTML: 
   -
     type: div
     attribute:
-      class: card-body
+      class: card
       style:
-        min-height: 200px
+        min-height: 600px
     innerHTML:
       -
-        type: h5
+        type: img
+        settings:
+          enabled: rs:img_exist
         attribute:
-          class: card-title
-        innerHTML: rs:fullname
+          src: rs:img_name
+          class: card-img-top
+          title: rs:fullname
       -
-        type: address
+        type: div
+        settings:
+          disabled: rs:img_exist
+        attribute:
+          class: text-center font-italic
+          style:
+           height: 328px
+           padding-top: 150px
+        innerHTML: 'No image'
+      -
+        type: div
+        attribute:
+          class: card-body
+          style:
+            min-height: 200px
         innerHTML:
           -
-            type: div
-            innerHTML:
-              -
-                type: abbr
-                attribute:
-                  title: Email
-                  class: content-colon
-                innerHTML: 'Email'
-              -
-                type: a
-                innerHTML: rs:email
-                attribute:
-                  onclick: "location.href='mailto:'+this.innerHTML"
+            type: h5
+            attribute:
+              class: card-title
+            innerHTML: rs:fullname
           -
-            type: div
+            type: address
             innerHTML:
               -
-                type: abbr
-                attribute:
-                  title: Phone
-                  class: content-colon
-                innerHTML: 'Phone'
+                type: div
+                innerHTML:
+                  -
+                    type: abbr
+                    attribute:
+                      title: Email
+                      class: content-colon
+                    innerHTML: 'Email'
+                  -
+                    type: a
+                    innerHTML: rs:email
+                    attribute:
+                      onclick: "location.href='mailto:'+this.innerHTML"
               -
-                type: text
-                innerHTML: rs:phone
+                type: div
+                innerHTML:
+                  -
+                    type: abbr
+                    attribute:
+                      title: Phone
+                      class: content-colon
+                    innerHTML: 'Phone'
+                  -
+                    type: text
+                    innerHTML: rs:phone
