@@ -19,24 +19,20 @@ innerHTML:
           src: rs:img_name
           class: card-img-top
           title: rs:fullname
-          style:
-            min-height: 300px
       -
-        type: div
+        type: img
         settings:
           disabled: rs:img_exist
         attribute:
-          class: text-center font-italic
-          style:
-           min-height: 300px
-           padding-top: 150px
-        innerHTML: 'No image'
+          src: /plugin/account/assignment_v1/no_image.png
+          class: card-img-top
+          title: No image
       -
         type: div
         attribute:
           class: card-body
           style:
-            height: 100px
+            min-height: 100px
         innerHTML:
           -
             type: h5

@@ -1,5 +1,9 @@
-version: 1.3.2
+version: 1.3.3
 history:
+  1.3.3:
+    date: '2024-07-08'
+    title: Card
+    description: 'Remove min-height for image. Add image if image not exist.'
   1.3.2:
     date: '2024-05-17'
     title: Layout
