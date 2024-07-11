@@ -16,7 +16,7 @@ class PluginAccountAssignment_v1{
     $accounts = $this->db->account_select_by_role($data->get('role'), $data->get('order_by/key'));
     $cards = array();
     foreach($accounts as $v){
-      $img_name = $this->img_dir.'/'.$v['username'].'.jpg';
+      $img_name = $this->img_dir.'/'.$v['id'].'.jpg';
       $img_exist = wfFilesystem::fileExist(wfGlobals::getWebDir().$img_name);
       $v['img_name'] = $img_name;
       $v['img_exist'] = $img_exist;
