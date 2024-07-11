@@ -2,7 +2,7 @@
 class PluginAccountAssignment_v1{
   public $db = null;
   private $plugin_settings = null;
-  private $img_dir = '/theme/[theme]/account/img';
+  private $img_dir = '/data/theme/[theme]/account/profile_image';
   function __construct() {
     require_once __DIR__.'/mysql/db.php';
     $this->plugin_settings = wfPlugin::getPluginSettings('account/assignment_v1', true);
